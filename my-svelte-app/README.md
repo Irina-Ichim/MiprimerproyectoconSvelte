@@ -1,107 +1,49 @@
-# This repo is no longer maintained. Consider using `npm init vite` and selecting the `svelte` option or — if you want a full-fledged app framework — use [SvelteKit](https://kit.svelte.dev), the official application framework for Svelte.
+# Mi Primer Proyecto con Svelte
 
----
+## Descripción
+Este es un proyecto de ejemplo para aplicaciones Svelte. Puedes encontrar el proyecto original en https://github.com/sveltejs/template.
 
-# svelte app
+## Requisitos Previos
+Para trabajar en este proyecto, asegúrate de tener instalado lo siguiente en tu máquina:
+- Node.js (versión recomendada).
+- Editor de código (Visual Studio Code, Sublime Text, etc.).
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+## Empezar
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
+1. Instala las dependencias...
 ```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
-
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
-
-## Get started
-
-Install the dependencies...
-
-```bash
-cd svelte-app
+cd mi-proyecto-svelte
 npm install
-```
 
-...then start [Rollup](https://rollupjs.org):
-
-```bash
+1. ...luego inicia Rollup:
 npm run dev
-```
+Abre tu navegador y visita localhost:8080. Deberías ver tu aplicación en funcionamiento. Edita un archivo de componente en la carpeta src, guárdalo y recarga la página para ver los cambios.
 
-Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+Modo de aplicación de una sola página
+Por defecto, sirv solo responderá a solicitudes que coincidan con archivos en la carpeta public. Esto maximiza la compatibilidad con servidores de archivos estáticos, lo que te permite implementar tu aplicación en cualquier lugar.
 
-By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
-
-If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommend installing the official extension [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode). If you are using other editors you may need to install a plugin in order to get syntax highlighting and intellisense.
-
-## Building and running in production mode
-
-To create an optimised version of the app:
-
-```bash
-npm run build
-```
-
-You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
-
-
-## Single-page app mode
-
-By default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
-
-If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `"start"` command in package.json:
-
-```js
+Si estás construyendo una aplicación de una sola página (SPA) con múltiples rutas, sirv necesita poder responder a solicitudes para cualquier ruta. Puedes lograrlo editando el comando "start" en el archivo package.json:
 "start": "sirv public --single"
-```
-
-## Using TypeScript
-
-This template comes with a script to set up a TypeScript development environment, you can run it immediately after cloning the template with:
-
-```bash
+Usando TypeScript
+Este proyecto viene con un script para configurar un entorno de desarrollo con TypeScript. Puedes ejecutarlo inmediatamente después de clonar el proyecto con:
 node scripts/setupTypeScript.js
-```
-
-Or remove the script via:
-
-```bash
+O puedes eliminar el script con:
 rm scripts/setupTypeScript.js
-```
+Si deseas usar baseUrl o alias path en tu archivo tsconfig, necesitas configurar @rollup/plugin-alias para que Rollup resuelva los alias. Para obtener más información, consulta esta pregunta de StackOverflow.
 
-If you want to use `baseUrl` or `path` aliases within your `tsconfig`, you need to set up `@rollup/plugin-alias` to tell Rollup to resolve the aliases. For more info, see [this StackOverflow question](https://stackoverflow.com/questions/63427935/setup-tsconfig-path-in-svelte).
-
-## Deploying to the web
-
-### With [Vercel](https://vercel.com)
-
-Install `vercel` if you haven't already:
-
-```bash
+Despliegue en la web
+Con Vercel
+Instala vercel si aún no lo has hecho:
 npm install -g vercel
-```
-
-Then, from within your project folder:
-
-```bash
+Luego, desde la carpeta de tu proyecto:
 cd public
-vercel deploy --name my-project
-```
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
+vercel deploy --name mi-proyecto
+Con surge
+Instala surge si aún no lo has hecho:
 npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
+Luego, desde la carpeta de tu proyecto:
 npm run build
-surge public my-project.surge.sh
-```
+surge public mi-proyecto.surge.sh
+
+Este es un tutorial básico para comenzar con Svelte. Puedes personalizarlo según tus necesidades y añadir más información relevante sobre tu proyecto. ¡Espero que te sea útil!
+
